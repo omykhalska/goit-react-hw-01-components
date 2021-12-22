@@ -1,30 +1,42 @@
 import PropTypes from 'prop-types';
+import {
+  Container,
+  DataBox,
+  UserAvatar,
+  UserName,
+  UserTag,
+  UserLocation,
+  Stats,
+  StatsLabel,
+  StatsData,
+  StatsBox,
+} from './Profile.styled';
 
 export default function Profile({ username, tag, location, avatar, stats }) {
   return (
-    <div className="profile">
-      <div className="description">
-        <img src={avatar} alt="User avatar" className="avatar" />
-        <p className="name">{username}</p>
-        <p className="tag">@{tag}</p>
-        <p className="location">{location}</p>
-      </div>
+    <Container>
+      <DataBox>
+        <UserAvatar src={avatar} alt="User avatar" />
+        <UserName>{username}</UserName>
+        <UserTag>@{tag}</UserTag>
+        <UserLocation>{location}</UserLocation>
+      </DataBox>
 
-      <ul className="stats">
-        <li>
-          <span className="label">Followers</span>
-          <span className="quantity">{stats.followers}</span>
-        </li>
-        <li>
-          <span className="label">Views</span>
-          <span className="quantity">{stats.views}</span>
-        </li>
-        <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{stats.likes}</span>
-        </li>
-      </ul>
-    </div>
+      <Stats>
+        <StatsBox>
+          <StatsLabel>Followers</StatsLabel>
+          <StatsData>{stats.followers.toLocaleString()}</StatsData>
+        </StatsBox>
+        <StatsBox>
+          <StatsLabel>Views</StatsLabel>
+          <StatsData>{stats.views.toLocaleString()}</StatsData>
+        </StatsBox>
+        <StatsBox>
+          <StatsLabel>Likes</StatsLabel>
+          <StatsData>{stats.likes.toLocaleString()}</StatsData>
+        </StatsBox>
+      </Stats>
+    </Container>
   );
 }
 
