@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 export const Container = styled.div`
   margin: 10px auto;
   width: 320px;
-  border: 1px solid #dee5ed;
+  box-shadow: 4px 4px 8px 0 #6e7681;
   border-radius: 5px;
   overflow: hidden;
 `;
@@ -24,6 +24,7 @@ export const UserAvatar = styled.img`
   display: block;
   width: 100px;
   border-radius: 50%;
+  box-shadow: 4px 4px 8px 0 #6e7681;
 `;
 
 export const UserName = styled.p`
