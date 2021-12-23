@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 
 export const Container = styled.div`
-  width: 320px;
   min-width: 320px;
   box-shadow: ${props => props.theme.boxShadow};
   border-radius: ${props => props.theme.boxBorderRadius};
@@ -27,8 +26,6 @@ export const DataBox = styled.div`
 
 export const UserAvatar = styled.img`
   margin-bottom: ${props => props.theme.spacing(2)};
-
-  display: block;
   width: 100px;
   border-radius: ${props => props.theme.imgBorderRadius};
   box-shadow: ${props => props.theme.boxShadow};
@@ -36,24 +33,23 @@ export const UserAvatar = styled.img`
 
 export const UserName = styled.p`
   margin: 0 0 ${props => props.theme.spacing(2)} 0;
+
+  font-size: 20px;
   font-weight: 700;
   color: ${props => props.theme.colors.primaryTextColor};
 `;
 
 export const UserTag = styled.p`
   margin: 0 0 ${props => props.theme.spacing(2)} 0;
+
   color: ${props => props.theme.colors.secondaryTextColor};
 `;
 
 export const UserLocation = styled.p`
-  margin: 0;
   color: ${props => props.theme.colors.secondaryTextColor};
 `;
 
 export const Stats = styled.ul`
-  margin: 0;
-  padding: 0;
-
   display: flex;
   justify-content: center;
 
@@ -74,6 +70,7 @@ export const StatsBox = styled.li`
 
 export const StatsLabel = styled.span`
   margin-bottom: ${props => props.theme.spacing(2)};
+
   color: ${props => props.theme.colors.secondaryTextColor};
 `;
 

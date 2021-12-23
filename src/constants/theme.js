@@ -10,5 +10,5 @@ export const theme = Object.freeze({
   boxBorderRadius: '4px',
   imgBorderRadius: '50%',
   boxShadow: '4px 4px 8px 0 #6e7681',
-  transition: '250ms ease-out',
+  transition: '500ms ease-out',
 });
