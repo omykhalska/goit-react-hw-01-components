@@ -1,46 +1,53 @@
 import styled from '@emotion/styled';
 
 export const Container = styled.div`
-  margin: 10px auto;
   width: 320px;
-  box-shadow: 4px 4px 8px 0 #6e7681;
-  border-radius: 5px;
+  min-width: 320px;
+  box-shadow: ${props => props.theme.boxShadow};
+  border-radius: ${props => props.theme.boxBorderRadius};
   overflow: hidden;
+  transition: all ${props => props.theme.transition};
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+  }
 `;
 
 export const DataBox = styled.div`
-  padding: 20px 40px;
+  padding: ${props => props.theme.spacing(5)}
+    ${props => props.theme.spacing(10)};
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  background-color: #ffffff;
+  background-color: ${props => props.theme.colors.primaryBgColor};
 `;
 
 export const UserAvatar = styled.img`
-  margin-bottom: 10px;
+  margin-bottom: ${props => props.theme.spacing(2)};
 
   display: block;
   width: 100px;
-  border-radius: 50%;
-  box-shadow: 4px 4px 8px 0 #6e7681;
+  border-radius: ${props => props.theme.imgBorderRadius};
+  box-shadow: ${props => props.theme.boxShadow};
 `;
 
 export const UserName = styled.p`
-  margin: 0 0 10px 0;
+  margin: 0 0 ${props => props.theme.spacing(2)} 0;
   font-weight: 700;
-  color: black;
+  color: ${props => props.theme.colors.primaryTextColor};
 `;
 
 export const UserTag = styled.p`
-  margin: 0 0 10px 0;
-  color: #6e7681;
+  margin: 0 0 ${props => props.theme.spacing(2)} 0;
+  color: ${props => props.theme.colors.secondaryTextColor};
 `;
 
 export const UserLocation = styled.p`
   margin: 0;
-  color: #6e7681;
+  color: ${props => props.theme.colors.secondaryTextColor};
 `;
 
 export const Stats = styled.ul`
@@ -50,13 +57,13 @@ export const Stats = styled.ul`
   display: flex;
   justify-content: center;
 
-  background-color: #f3f6f9;
+  background-color: ${props => props.theme.colors.secondaryBgColor};
   list-style: none;
 `;
 
 export const StatsBox = styled.li`
-  padding: 10px;
-  border: 1px solid #dee5ed;
+  padding: ${props => props.theme.spacing(2)};
+  border: 1px solid ${props => props.theme.colors.borderColor};
 
   flex-basis: calc(100% / 3);
 
@@ -66,10 +73,11 @@ export const StatsBox = styled.li`
 `;
 
 export const StatsLabel = styled.span`
-  margin-bottom: 10px;
-  color: #6e7681;
+  margin-bottom: ${props => props.theme.spacing(2)};
+  color: ${props => props.theme.colors.secondaryTextColor};
 `;
 
 export const StatsData = styled.span`
   font-weight: 700;
+  color: ${props => props.theme.colors.primaryTextColor};
 `;
