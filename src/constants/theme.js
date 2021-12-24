@@ -5,6 +5,8 @@ export const theme = Object.freeze({
     primaryBgColor: '#ffffff',
     secondaryBgColor: '#f3f6f9',
     borderColor: '#dee5ed',
+    onlineColor: '#008000',
+    offlineColor: '#ff0000',
   },
   spacing: value => `${4 * value}px`,
   boxBorderRadius: '4px',

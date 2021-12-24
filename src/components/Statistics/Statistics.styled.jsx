@@ -25,6 +25,7 @@ export const SectionTitle = styled.h2`
   padding: ${props => props.theme.spacing(5)}
     ${props => props.theme.spacing(10)};
 
+  text-transform: uppercase;
   text-align: center;
   font-size: 20px;
 `;

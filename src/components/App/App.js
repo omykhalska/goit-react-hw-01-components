@@ -1,10 +1,13 @@
 // это ГЛАВНЫЙ КОМПОНЕНТ приложения
-
-import Profile from '../Profile/Profile'; // импортирум компонент и его пропсы
-import Statistics from '../Statistics/Statistics';
-import user from '../../data/user.json'; // сюда нужно импортировать данные для рендера (пропсы)
-import stats from '../../data/stats.json';
+// импортируeм компонент и его пропсы
 import { Container } from './App.styled';
+import Profile from '../Profile/Profile';
+import Statistics from '../Statistics/Statistics';
+import FriendList from '../FriendsList/FriendsList';
+// импортируем данные для рендера (json)
+import user from '../../data/user.json';
+import stats from '../../data/stats.json';
+import friends from '../../data/friends.json';
 
 export default function App() {
   return (
@@ -17,6 +20,7 @@ export default function App() {
         stats={user.stats}
       />
       <Statistics title="Upload stats" stats={stats} />
+      <FriendList friends={friends} />
     </Container>
   );
 }
