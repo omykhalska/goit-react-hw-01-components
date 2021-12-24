@@ -2,14 +2,13 @@ import styled from '@emotion/styled';
 
 export const Container = styled.div`
   min-width: 320px;
-  box-shadow: ${props => props.theme.boxShadow};
   border-radius: ${props => props.theme.boxBorderRadius};
   overflow: hidden;
   transition: all ${props => props.theme.transition};
 
   &:hover,
   &:focus {
-    transform: scale(1.1);
+    box-shadow: ${props => props.theme.boxShadow};
   }
 `;
 
@@ -21,6 +20,7 @@ export const DataBox = styled.div`
   flex-direction: column;
   align-items: center;
 
+  border: 1px solid ${props => props.theme.colors.borderColor};
   background-color: ${props => props.theme.colors.primaryBgColor};
 `;
 
@@ -34,7 +34,7 @@ export const UserAvatar = styled.img`
 export const UserName = styled.p`
   margin: 0 0 ${props => props.theme.spacing(2)} 0;
 
-  font-size: 20px;
+  font-size: 1.25em;
   font-weight: 700;
   color: ${props => props.theme.colors.primaryTextColor};
 `;

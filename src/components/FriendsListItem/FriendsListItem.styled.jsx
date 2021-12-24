@@ -30,7 +30,7 @@ export const FriendAvatar = styled.img`
 `;
 
 export const FriendName = styled.p`
-  font-size: 20px;
+  font-size: 1.25em;
   font-weight: 700;
   color: ${props => props.theme.colors.primaryTextColor};
 `;

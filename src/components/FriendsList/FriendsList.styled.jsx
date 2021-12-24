@@ -9,11 +9,11 @@ export const FriendsList = styled.ul`
   gap: ${props => props.theme.spacing(3)};
 
   list-style: none;
-  box-shadow: ${props => props.theme.boxShadow};
-  transition: all ${props => props.theme.transition};
+  border: 1px solid ${props => props.theme.colors.borderColor};
+  transition: ${props => props.theme.transition};
 
   &:hover,
   &:focus {
-    transform: scale(1.1);
+    box-shadow: ${props => props.theme.boxShadow};
   }
 `;

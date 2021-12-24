@@ -1,13 +1,13 @@
-// это ГЛАВНЫЙ КОМПОНЕНТ приложения
-// импортируeм компонент и его пропсы
 import { Container } from './App.styled';
 import Profile from '../Profile/Profile';
 import Statistics from '../Statistics/Statistics';
 import FriendList from '../FriendsList/FriendsList';
-// импортируем данные для рендера (json)
+import TransactionHistory from '../TransactionsHistory/TransactionHistory';
+
 import user from '../../data/user.json';
 import stats from '../../data/stats.json';
 import friends from '../../data/friends.json';
+import transactions from '../../data/transactions.json';
 
 export default function App() {
   return (
@@ -21,6 +21,7 @@ export default function App() {
       />
       <Statistics title="Upload stats" stats={stats} />
       <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />
     </Container>
   );
 }

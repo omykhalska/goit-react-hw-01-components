@@ -7,6 +7,7 @@ export const theme = Object.freeze({
     borderColor: '#dee5ed',
     onlineColor: '#008000',
     offlineColor: '#ff0000',
+    irisBlue: '#00bcd5',
   },
   spacing: value => `${4 * value}px`,
   boxBorderRadius: '4px',

@@ -9,7 +9,7 @@ export const StatsSection = styled.section`
   flex-direction: column;
   align-items: stretch;
 
-  box-shadow: ${props => props.theme.boxShadow};
+  outline: 1px solid ${props => props.theme.colors.borderColor};
   border-radius: ${props => props.theme.boxBorderRadius};
   overflow: hidden;
   transition: all ${props => props.theme.transition};
@@ -17,7 +17,7 @@ export const StatsSection = styled.section`
 
   &:hover,
   &:focus {
-    transform: scale(1.1);
+    box-shadow: ${props => props.theme.boxShadow};
   }
 `;
 
@@ -27,7 +27,7 @@ export const SectionTitle = styled.h2`
 
   text-transform: uppercase;
   text-align: center;
-  font-size: 20px;
+  font-size: 1.25em;
 `;
 
 export const StatsList = styled.ul`
