@@ -20,14 +20,16 @@ export default function TransactionHistory({ items }) {
       </TransactionsTableTitle>
 
       <TransactionsTableBody>
-        {items.map(({ id, type, amount, currency }) => (
-          <TransactionHistoryRow
-            key={id}
-            type={type}
-            amount={amount}
-            currency={currency}
-          />
-        ))}
+        {items
+          .sort((a, b) => a.type.localeCompare(b.type))
+          .map(({ id, type, amount, currency }) => (
+            <TransactionHistoryRow
+              key={id}
+              type={type}
+              amount={amount}
+              currency={currency}
+            />
+          ))}
       </TransactionsTableBody>
     </TransactionsTable>
   );
