@@ -11,8 +11,6 @@ export const TransactionsTable = styled.table`
   }
 `;
 
-export const TransactionsTableTitle = styled.thead``;
-
 export const TableHeadRow = styled.tr`
   text-align: center;
   text-transform: uppercase;
@@ -20,8 +18,6 @@ export const TableHeadRow = styled.tr`
   color: ${props => props.theme.colors.primaryBgColor};
   background-color: ${props => props.theme.colors.irisBlue};
 `;
-
-export const TransactionsTableBody = styled.tbody``;
 
 export const TableColumnHeader = styled.th`
   min-width: 230px;

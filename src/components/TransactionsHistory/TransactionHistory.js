@@ -2,8 +2,6 @@ import PropTypes from 'prop-types';
 import TransactionHistoryRow from '../TransactionHistoryRow/TransactionHistoryRow';
 import {
   TransactionsTable,
-  TransactionsTableTitle,
-  TransactionsTableBody,
   TableHeadRow,
   TableColumnHeader,
 } from './TransactionHistory.styled';
@@ -11,15 +9,15 @@ import {
 export default function TransactionHistory({ items }) {
   return (
     <TransactionsTable>
-      <TransactionsTableTitle>
+      <thead>
         <TableHeadRow>
           <TableColumnHeader>Type</TableColumnHeader>
           <TableColumnHeader>Amount</TableColumnHeader>
           <TableColumnHeader>Currency</TableColumnHeader>
         </TableHeadRow>
-      </TransactionsTableTitle>
+      </thead>
 
-      <TransactionsTableBody>
+      <tbody>
         {items
           .sort((a, b) => a.type.localeCompare(b.type))
           .map(({ id, type, amount, currency }) => (
@@ -30,7 +28,7 @@ export default function TransactionHistory({ items }) {
               currency={currency}
             />
           ))}
-      </TransactionsTableBody>
+      </tbody>
     </TransactionsTable>
   );
 }
