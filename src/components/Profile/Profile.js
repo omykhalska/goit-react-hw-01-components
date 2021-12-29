@@ -12,7 +12,13 @@ import {
   StatsBox,
 } from './Profile.styled';
 
-export default function Profile({ username, tag, location, avatar, stats }) {
+export default function Profile({
+  username,
+  tag,
+  location,
+  avatar,
+  stats: { followers, views, likes },
+}) {
   return (
     <Container>
       <DataBox>
@@ -25,15 +31,15 @@ export default function Profile({ username, tag, location, avatar, stats }) {
       <Stats>
         <StatsBox>
           <StatsLabel>Followers</StatsLabel>
-          <StatsData>{stats.followers.toLocaleString()}</StatsData>
+          <StatsData>{followers.toLocaleString()}</StatsData>
         </StatsBox>
         <StatsBox>
           <StatsLabel>Views</StatsLabel>
-          <StatsData>{stats.views.toLocaleString()}</StatsData>
+          <StatsData>{views.toLocaleString()}</StatsData>
         </StatsBox>
         <StatsBox>
           <StatsLabel>Likes</StatsLabel>
-          <StatsData>{stats.likes.toLocaleString()}</StatsData>
+          <StatsData>{likes.toLocaleString()}</StatsData>
         </StatsBox>
       </Stats>
     </Container>
